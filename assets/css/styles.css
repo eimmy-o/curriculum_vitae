@@ -58,7 +58,7 @@ a, .btn {
  }
 
  a {
-    color: var(--color-text-light);
+    color: black;
     text-decoration: none ; 
     text-decoration-color: white ; 
  }
@@ -68,13 +68,13 @@ a, .btn {
     color: var(--color-accent-light);
     text-decoration: underline ;  
     text-underline-offset: 1rem ; 
-    text-decoration-color: rgb(181, 181, 181) ; 
+    text-decoration-color: var(--color-accent-dark) ;
  }
 
  
  .logo { 
     font-size: 2rem ; 
-    color: var(--color-accent-light);
+    color: var(--color-bg);
  }
 
  .logo:hover {
@@ -232,10 +232,6 @@ section {
    transition: transform 0.3s ease-in-out;
 }
 
-.icon:hover {
-   transform: scale(1.1);
-}
-
 /* BUTTONS */
 .btn-container {
    display: flex ; 
@@ -253,24 +249,21 @@ section {
 
 .btn-color-1 , .btn-color-2 {
    border: 1px solid var(--color-primary);
+   color:var(--color-accent-dark);
 }
 
-.btn-color-1 {
-   background: var(--color-primary);
-   color: var(--color-text-light);
-}
 
 .btn-color-1:hover , .btn-color-2:hover {
    cursor: pointer ; 
 }
 
 .btn-color-1 , .btn-color-2:hover {
-   background: rgb(53, 53, 53) ; 
+   background: var(--color-primary) ;
    color: white ; 
 }
 
 .btn-color-1:hover {
-   background: rgb(0, 0, 0) ; 
+   background: var(--color-accent-dark) ;
 }
 
 .btn-color-2 {
@@ -316,6 +309,7 @@ section {
 }
 
 .details-containers {
+   color:var(--color-accent-dark);
    padding: 1.5rem ; 
    flex: 1 ; 
    background: var(--color-bg);
@@ -397,7 +391,7 @@ article .icon {
 
 .project-description {
    margin: 1rem ;
-   color: var(--color-dark);
+   color: var(--color-secondary);
 }
 
 .project-btn {
@@ -438,7 +432,7 @@ article .icon {
 }
 
 .contact-info-container p a:hover {
-   color: var(--color-secondary);
+   color: var(--color-accent-dark);
 }
 
 .contact-icon {
@@ -472,13 +466,13 @@ article .icon {
   background: var(--color-bg);
   border-radius: 0.5rem;
   font-size: 1rem;
-  resize: none; /* Evita que el textarea se pueda redimensionar */
+  resize: none;
 }
 
 .contact-form-container input:focus,
 .contact-form-container textarea:focus {
    border-color: var(--color-primary);
-   background: var(--color-accent-light);
+   background: var(--color-bg-alt);
 }
 
 .contact-form-container button {
